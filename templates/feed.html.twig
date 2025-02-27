@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display profile.
+ *
+ * Available variables:
+ * - foo: Foo variable description.
+ *
+ * @see template_preprocess_profile()
+ *
+ * @ingroup themeable
+ * {{ devel_dump(feed) }}
+ */
+#}
+<div class="row">
+    {% for post in feed %}
+      <div style="max-width: 600px; padding-left: 4em; border-bottom: 1px solid #444; margin-bottom: 1em;">
+      	<img src="{{ post.avatar }}" width="80"/>
+				<p>{{ post.author }} on {{ post.date }}</p> 
+				<p><a href="{{ post.url }}" target="new">Read post on Bluesky</a>
+				</p><p>{{ post.text }}</p>
+				{% if post.ext is not empty %}
+				 <img src = "{{ post.ext.thumb }}" alt = "Image from post" width="300"/>	
+					<h4><a href="{{post.ext.uri}}" target="new">{{ post.ext.title }}</a></h4>
+					<p>{{ post.ext.description }}</p>
+								
+				{% endif %}				
+				<hr>
+      </div>
+   {% endfor %}
+    
+</div>

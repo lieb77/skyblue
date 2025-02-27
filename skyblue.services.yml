@@ -1,0 +1,11 @@
+services:
+  Drupal\skyblue\Hook\SkyBlueHooks:
+    class: Drupal\skyblue\Hook\SkyBlueHooks
+    autowire: true
+
+  skyblue.endpoints:
+    class: Drupal\skyblue\EndPoints
+
+  skyblue.service:
+    class: Drupal\skyblue\SkyBlue
+    arguments: ['@logger.factory', '@config.factory', '@key.repository', '@http_client', '@skyblue.endpoints']

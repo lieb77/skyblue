@@ -1,0 +1,55 @@
+skyblue.profile:
+  path: '/skyblue/feed'
+  defaults:
+    _title: 'Bluesky Timeline'
+    _controller: '\Drupal\skyblue\Controller\SkyBlueController::feed'
+  requirements:
+    _permission: 'access content'
+
+skyblue.settings:
+  path: '/admin/config/services/skybluesettings'
+  defaults:
+    _title: 'SkyBlue Settings'
+    _form: 'Drupal\skyblue\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+skyblue.search:
+  path: '/skyblue/search'
+  defaults:
+    _title: 'Search Posts'
+    _form: 'Drupal\skyblue\Form\SearchForm'
+  requirements:
+    _permission: 'access content'
+
+skyblue.post:
+  path: '/skyblue/post'
+  defaults:
+    _title: 'Create Post'
+    _form: 'Drupal\skyblue\Form\PostForm'
+  requirements:
+    _permission: 'access content'
+
+skyblue.followers:
+  path: '/skyblue/followers'
+  defaults:
+    _title: 'Bluesky Followers'
+    _controller: '\Drupal\skyblue\Controller\SkyBlueController::followers'
+  requirements:
+    _permission: 'access content'
+    
+skyblue.following:
+  path: '/skyblue/following'
+  defaults:
+    _title: 'Bluesky Following'
+    _controller: '\Drupal\skyblue\Controller\SkyBlueController::following'
+  requirements:
+    _permission: 'access content'
+    
+skyblue.posts:
+  path: '/skyblue/posts'
+  defaults:
+    _title: 'Bluesky Posts'
+    _controller: '\Drupal\skyblue\Controller\SkyBlueController::posts'
+  requirements:
+    _permission: 'access content'

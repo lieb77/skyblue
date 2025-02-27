@@ -1,0 +1,6 @@
+skyblue.settings:
+  title: SkyBlue Settings
+  description: Configure SkyBlue
+  parent: system.admin_config_services
+  route_name: skyblue.settings
+  weight: 10
